@@ -48,17 +48,29 @@ Dispositivos
 
 Configuracion
 Clona el repositorio o descarga el ZIP
+
 Extraiga el contenido
+
 instale paho-mqtt, utilizado por backend.py y enviar.py.
+
 El proyecto utiliza el broker público de pruebas HiveMQ:
+
 Parámetro	Valor
+
 Broker	broker.hivemq.com
+
 Puerto MQTT TCP	1883
+
 Puerto MQTT WebSockets seguro	8884
+
 Protocolo de los ESP32 y backend	MQTT sobre TCP
+
 Protocolo del dashboard	MQTT sobre WebSockets
+
 El prefijo de tópicos utilizado actualmente es: ds8/1gs133/estacionamiento
+
 Configure las conexiones PIN para adaptarse a su propio dispositvo
+
 Configure la variable PASSWORD y WIFI de acuerdo a su propia red
         ├── styles.css
         ├── package.json
