@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "author": "Assesin Z",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard-half",
+      "id": "bb1",
+      "top": 304.2,
+      "left": 22,
+      "attrs": { "color": "#eeefed" }
+    },
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 123.14,
+      "left": 272.5,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": 365.3,
+      "left": 218.1,
+      "rotate": 180,
+      "attrs": { "distance": "309" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 322.8,
+      "left": 186.2,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "resistor1",
+      "top": 350.4,
+      "left": 162.65,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:5V", "bb1:tp.25", "red", [ "h0" ] ],
+    [ "esp:GND.1", "bb1:tn.25", "black", [ "h96.15", "v105.6" ] ],
+    [ "bb1:26t.a", "bb1:tn.21", "black", [ "v0" ] ],
+    [ "bb1:29t.a", "bb1:tp.24", "red", [ "v0" ] ],
+    [ "bb1:28t.a", "esp:17", "green", [ "v0" ] ],
+    [ "bb1:27t.a", "esp:18", "green", [ "v0" ] ],
+    [ "esp:2", "bb1:18t.a", "green", [ "h0" ] ],
+    [ "led1:C", "bb1:16t.a", "green", [ "v0" ] ],
+    [ "ultrasonic1:VCC", "bb1:29t.b", "", [ "$bb" ] ],
+    [ "ultrasonic1:TRIG", "bb1:28t.b", "", [ "$bb" ] ],
+    [ "ultrasonic1:ECHO", "bb1:27t.b", "", [ "$bb" ] ],
+    [ "ultrasonic1:GND", "bb1:26t.b", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:18t.b", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:17t.b", "", [ "$bb" ] ],
+    [ "resistor1:1", "bb1:tn.13", "", [ "$bb" ] ],
+    [ "resistor1:2", "bb1:16t.d", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
