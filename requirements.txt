@@ -1,0 +1,3 @@
+# Dependencias del backend y del script de envío de órdenes.
+# Paho MQTT 2.x es necesario por CallbackAPIVersion.VERSION2 en backend.py.
+paho-mqtt>=2.0.0,<3.0.0
